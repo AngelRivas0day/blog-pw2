@@ -7,20 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { LegalComponent } from './legal/legal.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainLayoutComponent,
-    DashboardLayoutComponent,
-    LegalComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		MainLayoutComponent,
+		DashboardLayoutComponent,
+		LegalComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		MaterialModule,
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

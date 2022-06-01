@@ -1,1 +1,21 @@
-<p>main-layout works!</p>
+<mat-drawer-container autosize>
+	<mat-drawer #drawer mode="over">
+		<mat-toolbar>
+			<h2 class="mat-title">
+				Menu
+			</h2>
+		</mat-toolbar>
+	</mat-drawer>
+	<div class="main-layout-container">
+		<mat-toolbar>
+			<mat-toolbar-row>
+				<button type="button" mat-button (click)="drawer.toggle()">
+					Toggle sidenav
+				</button>
+			</mat-toolbar-row>
+		</mat-toolbar>
+		<div>
+			<router-outlet></router-outlet>
+		</div>		
+	</div>
+</mat-drawer-container>
