@@ -1,1 +1,55 @@
-<p>home works!</p>
+<div class="main-container margin">
+	<div fxLayout="row wrap" fxLayoutGap="10px grid">
+		<div fxFlex="100%" class="header-container">
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>
+						El mejor blog informativo sobre programación web.
+					</mat-card-title>
+					<mat-card-subtitle>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem voluptatem perspiciatis nemo voluptas harum et accusantium eum eligendi vel error possimus minus magni, quae placeat incidunt facilis aut ad autem sequi iusto! Aliquid impedit ab quae totam! Quos, enim deleniti sed doloremque, sunt culpa laudantium asperiores consequatur error cupiditate molestias!
+					</mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-actions>
+					<button mat-stroked-button color="primary">
+						Ver articulos
+					</button>
+				</mat-card-actions>
+			</mat-card>
+		</div>
+		<div fxFlex="100%" class="top-items-title">
+			<h1 class="mat-title text-center mt-6">
+				Nuestros producto nuevos
+			</h1>
+		</div>
+		<ng-container *ngFor="let item of items">
+			<div fxFlex="100%" fxFlex.gt-sm="25%" class="item">
+				<app-item
+					[item]="item"	
+				></app-item>
+			</div>
+		</ng-container>
+		<div fxFlex="100%" class="text-center mb-6">
+			<button mat-stroked-button color="primary" [routerLink]="['..','products']">
+				Ver todo
+			</button>
+		</div>
+		<div fxFlex="100%" class="top-articles-title">
+			<h1 class="mat-title text-center mt-6">
+				Nuestros últimos aritculos
+			</h1>
+		</div>
+		<ng-container *ngFor="let article of articles">
+			<div fxFlex="100%" fxFlex.gt-sm="33.33%" class="article-item">
+				<app-article-item
+					[article]="article"	
+				></app-article-item>
+			</div>
+		</ng-container>
+		<div fxFlex="100%" class="text-center mb-6">
+			<button mat-stroked-button color="primary" [routerLink]="['..','articles']">
+				Ver todo
+			</button>
+		</div>
+	</div>
+</div>

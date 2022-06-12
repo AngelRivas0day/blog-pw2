@@ -1,4 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
-
+$directions: "t","r","b","l";
+$measures: ("0": 0px,"1":8px,"2":12px,"3":16px,"4":20px,"5":30px,"6":40px);
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.main-container {
+	width: calc(100% - 40px);
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	display: block;
+	&.margin {
+		margin: 20px auto;
+	}
+}
+.p {
+	@each $direction in $directions {
+		&#{$direction} {
+			@each $size, $value in $measures {
+				&-#{$size} {
+					@if $direction == 't' {
+						padding-top: $value !important;
+					}
+					@if $direction == 'l' {
+						padding-left: $value !important
+					}
+					@if $direction == 'b' {
+						padding-bottom: $value !important
+					}
+					@if $direction == 'r' {
+						padding-right: $value !important
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+}
+
+.m {
+	@each $direction in $directions {
+		&#{$direction} {
+			@each $size, $value in $measures {
+				&-#{$size} {
+					@if $direction == 't' {
+						padding-top: $value !important;
+					}
+					@if $direction == 'l' {
+						padding-left: $value !important
+					}
+					@if $direction == 'b' {
+						padding-bottom: $value !important
+					}
+					@if $direction == 'r' {
+						padding-right: $value !important
+					}
+				}
+				
+			}
+			
+		}
+		
+	}
+}
+.cursor-pointer {
+	cursor: pointer !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+

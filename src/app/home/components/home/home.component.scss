@@ -1,0 +1,12 @@
+.article-item, .item {
+	margin-bottom: 20px;
+}
+mat-card-subtitle {
+	max-width: 75% !important;
+}
+.header-container mat-card {
+	max-width: 800px;
+	width: calc(100% - 40px);
+	margin: 0px auto;
+	display: block;
+}

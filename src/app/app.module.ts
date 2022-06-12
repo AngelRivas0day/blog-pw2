@@ -8,6 +8,8 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { LegalComponent } from './legal/legal.component';
 import { MaterialModule } from './material/material.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
 	declarations: [
@@ -21,6 +23,8 @@ import { MaterialModule } from './material/material.module';
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		MaterialModule,
+		HttpClientModule,
+		SharedModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]

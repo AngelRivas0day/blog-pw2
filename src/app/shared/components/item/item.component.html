@@ -1,0 +1,11 @@
+<mat-card>
+	<img mat-card-image [src]="item.image || 'https://material.angular.io/assets/img/examples/shiba2.jpg'" alt="Photo of a Shiba Inu">
+	<mat-card-content>
+		<p>
+			{{ (item.description | slice:0:10) || 'Cargando...' }}
+		</p>
+	</mat-card-content>
+	<mat-card-actions>
+		<button [routerLink]="['..','products',item.id]" mat-stroked-button>Ver detalles</button>
+	</mat-card-actions>
+</mat-card>

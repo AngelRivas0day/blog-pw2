@@ -1,0 +1,14 @@
+<mat-card class="cursor-pointer" [routerLink]="['..','articles',article.id]">
+	<mat-card-title-group>
+		<mat-card-title>
+			{{ article?.title || 'Cargando...' }}
+		</mat-card-title>
+		<mat-card-subtitle>
+			{{ article?.author?.name || 'Cargando...'}}
+		</mat-card-subtitle>
+		<img mat-card-lg-image [src]="article?.image || 'https://material.angular.io/assets/img/examples/shiba2.jpg'">
+	</mat-card-title-group>
+	<mat-card-content>
+		{{ (article?.body | slice:0:10) || 'Cargando...' }}
+	</mat-card-content>
+</mat-card>
