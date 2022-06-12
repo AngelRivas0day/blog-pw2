@@ -1,0 +1,41 @@
+<mat-dialog-content>
+	<form [formGroup]="form" fxLayout="row wrap" fxLayoutGap="0px grid">
+		<div fxFlex="100%">
+			<h1 class="mat-title mt-4 mb-4 text-center">
+				Price: {{ 12323 | currency }}
+			</h1>
+		</div>
+		<mat-form-field fxFlex="100%">
+			<mat-label>
+				Card
+			</mat-label>
+			<input type="text" matInput formControlName="card">
+		</mat-form-field>
+		<mat-form-field fxFlex="50%">
+			<mat-label>
+				Expiry date
+			</mat-label>
+			<input type="text" matInput formControlName="expiry">
+		</mat-form-field>
+		<mat-form-field fxFlex="50%">
+			<mat-label>
+				CVV
+			</mat-label>
+			<input type="text" matInput formControlName="cvv">
+		</mat-form-field>
+		<mat-form-field fxFlex="100%">
+			<mat-label>
+				Holder name
+			</mat-label>
+			<input type="text" matInput formControlName="holder_name">
+		</mat-form-field>
+	</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-raised-button color="primary" (click)="onPay()" [disabled]="form.invalid">
+		Pagar
+	</button>
+	<button mat-stroked-button color="warn" [mat-dialog-close]="false">
+		Cerrar
+	</button>
+</mat-dialog-actions>

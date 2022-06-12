@@ -1,1 +1,29 @@
-<p>product-details works!</p>
+<div class="main-container margin">
+	<div fxLayout="row wrap" fxLayoutGap="10px grid">
+		<div fxFlex="100%" fxFlex.gt-sm="50%">
+			<img class="image" [src]="product?.image || 'http://via.placeholder.com/400x400'" alt="">
+		</div>
+		<div fxFlex="100%" fxFlex.gt-sm="50%">
+			<div class="product-details mb-3">
+				<strong>
+					<h1 class="mat-title mb-0 pb-0 mt-0 pt-0">
+						{{ product?.name || 'Cargando...' }}
+					</h1>
+				</strong>
+				<strong>
+					<h3 class="mat-title mb-0 pb-0 mt-0 pt-0">
+						Price: {{ (product?.price | currency) || 'Cargando...' }}
+					</h3>
+				</strong>
+				<p>
+					{{ product?.description || 'Cargando...' }}
+				</p>
+			</div>
+			<div class="product-actions">
+				<button [disabled]="!product" (click)="openDialog()" mat-raised-button color="primary" [routerLink]="['comprar']">
+					Comprar
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
