@@ -44,6 +44,14 @@ export class AuthService {
 			role: data.role,
 			email: data.email
 		})
+		if (data.role == 'user') {
+			this.router.navigate(['profile'])
+			return
+		}
+		if (data.role == 'admin') {
+			this.router.navigate(['dashboard/articles'])
+			return
+		}
 		this.router.navigate(['profile'])
 	}
 
