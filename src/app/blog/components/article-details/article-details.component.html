@@ -1,0 +1,25 @@
+<div class="main-container margin">
+	<div fxLayout="row wrap" fxLayoutGap="10px grid">
+		<div fxFlex="100%">
+			<mat-chip-list aria-label="Dog selection">
+				<mat-chip>
+					<mat-chip-avatar>
+						<img [src]="article?.author?.image || 'https://material.angular.io/assets/img/examples/shiba1.jpg'"/>
+					</mat-chip-avatar>
+					{{ article?.autor?.name || 'Author...' }}
+				</mat-chip>
+			</mat-chip-list>
+		</div>
+		<div fxFlex="100%">
+			<img class="article-image" [src]="article?.image || 'http://via.placeholder.com/400x400'">
+		</div>
+		<div fxFlex="100%">
+			<div class="innerHTMLelement" [innerHTML]="article?.body || 'Cargando...'"></div>
+		</div>
+		<div fxFlex="100%">
+			<button mat-stroked-button [routerLink]="['..']" color="primary">
+				Back
+			</button>
+		</div>
+	</div>
+</div>

@@ -11,6 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
 	declarations: [],
@@ -29,6 +30,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 		MatListModule,
 		MatIconModule,
 		MatDialogModule,
+		MatChipsModule,
 	]
 })
 export class MaterialModule { }
