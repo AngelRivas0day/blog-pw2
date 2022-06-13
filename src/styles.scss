@@ -76,4 +76,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .text-right {
 	text-align: right !important;
 }
-
+.section-header {
+	height: 300px !important;
+	width: 100% !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("https://source.unsplash.com/random");
+	.header-title {
+		padding: 0;
+		margin: 0 20px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+}

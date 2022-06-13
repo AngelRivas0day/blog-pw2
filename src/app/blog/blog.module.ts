@@ -7,6 +7,7 @@ import { ArticleDetailsComponent } from './components/article-details/article-de
 import { ArticleCommentsComponent } from './components/article-comments/article-comments.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MaterialModule } from '../material/material.module';
 		BlogRoutingModule,
 		FlexLayoutModule,
 		MaterialModule,
+		SharedModule,
 	]
 })
 export class BlogModule { }

@@ -1,1 +1,16 @@
-<p>articles works!</p>
+<div class="main-container margin">
+	<div fxLayout="row wrap" fxLayoutGap="10px grid">
+		<div fxFlex="100%" class="mb-6">
+			<div class="section-header">
+				<div class="header-title">
+					Articles
+				</div>
+			</div>
+		</div>
+		<ng-container *ngFor="let item of articles">
+			<div fxFlex="100%" fxFlex.gt-sm="33.33%">
+				<app-article-item [article]="item"></app-article-item>
+			</div>
+		</ng-container>
+	</div>
+</div>
